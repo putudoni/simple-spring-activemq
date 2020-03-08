@@ -21,6 +21,13 @@
 	<bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
 		<property name="connectionFactory" ref="connectionFactory" />
 		<property name="defaultDestination" ref="jmsDestination"/>
+		<property name="messageConverter" ref="messageCustomConverter"/>
 	</bean>
 
+	<bean id="messageSender" class="com.pnwd.spring.activemq.MessageSender">
+		<property name="jmsTemplate" ref="jmsTemplate" />
+	</bean>
+	
+	<bean id="messageCustomConverter" class="com.pnwd.spring.activemq.MessageCustomConverter" />
+	
 </beans>
