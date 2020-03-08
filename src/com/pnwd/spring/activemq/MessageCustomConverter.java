@@ -8,6 +8,10 @@ import javax.jms.Session;
 import org.springframework.jms.support.converter.MessageConversionException;
 import org.springframework.jms.support.converter.MessageConverter;
 
+/**
+ * @author Putu Ngurah Wigadoni
+ *
+ */
 public class MessageCustomConverter implements MessageConverter {
 
 	@Override
