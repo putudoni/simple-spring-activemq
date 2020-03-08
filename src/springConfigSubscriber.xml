@@ -24,7 +24,7 @@
 		<property name="messageConverter" ref="messageCustomConverter"/>
 	</bean>
 
-	<bean id="messageSender" class="com.pnwd.spring.activemq.MessageSender">
+	<bean id="messageReceiver" class="com.pnwd.spring.activemq.MessageReceiver">
 		<property name="jmsTemplate" ref="jmsTemplate" />
 	</bean>
 	
